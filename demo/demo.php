@@ -70,7 +70,6 @@
     {
 
 
-
         public $name;
         public $age;
         public function __construct($name, $age)
@@ -91,19 +90,7 @@
     $student = new Student("aki", 25);
     var_dump($student);
     echo $student->getDataName();
-
     echo $student->getDataAge();
-
-
-
-
-
-
-
-
-
-
-
     // $person = array("firstname" => "John", "last_name" => "Doe", "age" => 30);
     // //print_r($person);
 
