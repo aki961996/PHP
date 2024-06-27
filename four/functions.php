@@ -1,11 +1,29 @@
 <?php
-$title = 'while Loop';
+$title = 'Functions';
 
-$favoriteGuitars = [
-    'Vela',
-    'Explorer',
-    'Strat'
+//first function
+function sum($firstValue, $secondValu)
+{
+    $result = $firstValue + $secondValu;
+    return $result;
+}
+$result = sum(100, 100);
+
+//second fun
+function output($value)
+{
+    echo '<pre>';
+    print_r($value);
+    echo '</pre>';
+}
+
+
+$players = [
+    'messi',
+    'jon',
+    "kling"
 ];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +33,9 @@ $favoriteGuitars = [
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>PHP Fundamentals: <?= $title; ?></title>
+
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/php-fundamentals.css" rel="stylesheet" />
+    <link href="./assets/css/php-fundamentals.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,25 +49,21 @@ $favoriteGuitars = [
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">My Favorite Guitars</h1>
+                <h1 class="mt-5">My Favorite Players</h1>
             </div>
         </div>
         <div class="row">
-            <table class="table table-striped">
-                <?php
 
-                $i = 0;
 
-                while ($i < count($favoriteGuitars)) {
-                    $guitar = $favoriteGuitars[$i];
-                    echo "<tr><td>$guitar</td></tr>";
+            <!-- result is there -->
+            <?php
 
-                    $i++;
-                }
+            output($players);
 
-                ?>
+            ?>
 
-            </table>
+
+
         </div>
     </div>
 </body>
